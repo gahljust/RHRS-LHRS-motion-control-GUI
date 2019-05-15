@@ -1,4 +1,5 @@
 # RHRS-LHRS-motion-control-GUI
+
 To compile and run the gui open a terminal window and cd to the
 directory containing the gui folder. If Qt has not been set up on the pi see READMEQT.txt.
 
@@ -6,10 +7,13 @@ Run "qmake", if qmake fails
 target the .pro file with qmake. 
 ex: qmake LHRSnewgui.pro
 
-then run "make clean"
+then run 
 
-And finally "make". 
+"make clean"
 
+And finally 
+
+"make". 
 
 
 qmake  or qmake xxx.pro
@@ -18,11 +22,12 @@ make
 
 
 
-To open the gui run
+To open the gui from the gui directory run
+
 
 ./rungui
 
-In the terminal from the gui.
+
 
 
 
@@ -44,7 +49,7 @@ The transducers should all be ran in parallel, with one wire from the input goin
 
 Input voltage goes to cw, ground goes to ccw, and S/NU goes to the AIN() terminals.
 
-Please see Labjacktransducerdiagram.png for correct AIN() slot placements, and see Transducerdiagram.png for proper wiring. 
+Please see Labjacktransducerdiagram.png for correct AIN() slot placements, and see Transducerwiringdiagram.png for proper wiring. 
 
 The code connecting the labjack and gui can be found in the script.py files and under the object readLabJack() in the main window.cpp file. 
 
@@ -69,4 +74,4 @@ Motor 4  second A_T detector y-axis
 The code for the velmex motors can be found in the VXM_interface_bare.cpp file.
 See the vxm_user_man.pdf for more information on wiring or coding for the welmex motors.
 
-All files cited in the Read me file can be found in the GUI folder.
+All files cited in the README file can be found in the GUI folder.
