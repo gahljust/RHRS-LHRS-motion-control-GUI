@@ -502,7 +502,7 @@ void MainWindow::sendSpeedCmd(std::string stepsPerSec)
 
     QString commandName = QString::fromStdString(port->get_command());
 
-    ui->lblCmdOut->setText(ui->lblCmdOut->text() + "New Command Stored: " + commandName);
+    ui->lblCmdOut->setText(ui->lblCmdOut->text() + commandName);
 
     ui->lblCmdOut->setText(ui->lblCmdOut->text());
 }
@@ -544,7 +544,7 @@ void MainWindow::sendSpeedCmd2(std::string stepsPerSec)
 
     QString commandName = QString::fromStdString(port3->get_command2());
 
-    ui->lblCmdOut->setText(ui->lblCmdOut->text() + "New Command Stored: " + commandName);
+    ui->lblCmdOut->setText(ui->lblCmdOut->text() + commandName);
 
     ui->lblCmdOut->setText(ui->lblCmdOut->text());
 }
