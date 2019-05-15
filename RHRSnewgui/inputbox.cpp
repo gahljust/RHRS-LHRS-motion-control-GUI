@@ -48,7 +48,7 @@ InputBox::InputBox(MainWindow &parent, QString title, QString desc, QString defa
 
     }
 
-    if(title.contains("A_T"))
+    if(title.contains("A_T Speed Settings"))
     {
         ui->buttonBox_2->setVisible(true);
         ui->buttonBox->setVisible(false);
