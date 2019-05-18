@@ -64,7 +64,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QTimer *timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(readLabJack()));         //reads labjack output  10 times/sec
-    timer->start(100);
+    timer->start(1000);
 
     QTimer *timer2 = new QTimer(this);
     connect(timer2,SIGNAL(timeout()),this,SLOT(update()));              //updates drawing 10 times/sec
@@ -218,43 +218,43 @@ void MainWindow::readLabJack()
     QProcess p;
     QString exe = "python script.py";            //main x axis voltage
     p.start(exe);
-    p.waitForFinished();
+    p.waitForFinished(3000);
     QString output = p.readAll();
 
     QProcess p2;
     QString exe2 = "python script2.py";         //main input voltage
     p2.start(exe2);
-    p2.waitForFinished();
+    p2.waitForFinished(3000);
     QString output2 = p2.readAll();
 
     QProcess p3;
     QString exe3 = "python script3.py";         // main y axis voltage
     p3.start(exe3);
-    p3.waitForFinished();
+    p3.waitForFinished(3000);
     QString output3 = p3.readAll();
 
     QProcess p4;
     QString exe4 = "python script4.py";       // for x1 transducer voltage
     p4.start(exe4);
-    p4.waitForFinished();
+    p4.waitForFinished(3000);
     QString output4 = p4.readAll();
 
     QProcess p5;
     QString exe5 = "python script5.py";         // for y1 transducer voltage
     p5.start(exe5);
-    p5.waitForFinished();
+    p5.waitForFinished(3000);
     QString output5 = p5.readAll();
 
     QProcess p6;
     QString exe6 = "python script6.py";         // for x2 transducer voltage
     p6.start(exe6);
-    p6.waitForFinished();
+    p6.waitForFinished(3000);
     QString output6 = p6.readAll();
 
     QProcess p7;
     QString exe7 = "python script7.py";         // for y2 transducer voltage
     p7.start(exe7);
-    p7.waitForFinished();
+    p7.waitForFinished(3000);
     QString output7 = p7.readAll();
 
 
