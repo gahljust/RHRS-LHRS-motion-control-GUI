@@ -67,7 +67,7 @@ class Log
 	Log()
 	{
 
-                sprintf(outLogName, "vxm_log.txt");
+        sprintf(outLogName, "vxm_log.txt");
 		outLog.open(outLogName, ios::out | ios::app);    // open in output and append mode
 		inLog.open(outLogName);                          // open in readonly mode
 		if(outLog.is_open() && inLog.is_open()) 
@@ -183,7 +183,7 @@ class Log
 		string temp, temp2;
 		if(isOpen){
 			int startLine = getLast("<<");
-			inLog.seekg(0);
+            inLog.seekg(0);
 			for(int i = 0; i < startLine; i++)
 				getline(inLog, temp);
 			inLog.clear();
@@ -301,6 +301,9 @@ class Log
 		return result;  // return list of commands in one string
 	}
 };
+
+
+
 
 class VXM_interface
 {
@@ -463,6 +466,7 @@ class VXM_interface
 		
                                                                       // WRITE A BLANK LINE TO LOG FILE FOR SEPERATION OF DATA
         vxmLog->writeSentCommandToLog("");
+
 	}
 
     string read_port()
@@ -496,6 +500,316 @@ class VXM_interface
 
 
 
+class Log2
+{
+private:
+    bool isOpen2;                    // Set to true when file is successfully opened
+    char outlog2Name[256];           // name of log2 file
+    fstream outlog2;                 // file stream object used for writing to log2 file
+    ifstream inlog2;                 // file stream object used for reading from log2 file
+    string intToString(int i)       // only for positive integers
+    {
+        string s2 = "";
+        while(i / 10 > 0)
+        {
+            s2 += static_cast<char>((i % 10) + 30);
+            i = i / 10;
+        }
+        return s2;
+    }
+
+public:
+    Log2()
+    {
+
+        sprintf(outlog2Name, "vxm_log2.txt");
+        outlog2.open(outlog2Name, ios::out | ios::app);    // open in output and append mode
+        inlog2.open(outlog2Name);                          // open in readonly mode
+        if(outlog2.is_open() && inlog2.is_open())
+        {
+
+            isOpen2 = true;
+        }
+        else
+        {
+
+            isOpen2 = false;
+        }
+    }
+    ~Log2()                     // object destructor: closes log2 file streams
+    {
+        outlog2.close();
+        inlog2.close();
+    }
+    void writeSentCommandTolog2(string s2)
+    {
+        if(isOpen2)
+        {
+            if(s2.compare("") == 0) outlog2 <<  endl;                              // if empty string, write line feed
+            else outlog2 << "&& Command issued to motors: " << s2 << endl;         // write command sent with && tag for reading
+        }
+    }
+    void comment(){
+        if(isOpen2) outlog2 << "//";
+    }
+    void writeTime()
+    {
+        if(isOpen2)
+        {
+            time_t t = time(0);                          // get time now
+            struct tm * now = localtime( & t );
+            char temp[128];
+            sprintf(temp, "** %i/%i/%i @ %i:%i",now->tm_mon+1,now->tm_mday,now->tm_year+1900,now->tm_hour,now->tm_min);
+            outlog2 << temp << endl;
+        }
+    }
+
+    void writeMotorMove(string motor2, string distance2)
+    {
+        if(isOpen2)
+        {
+            if(motor2.compare("x1")==0) motor2 = "horizontalx1";
+            if(motor2.compare("y1")==0) motor2 = "verticaly1";
+            if(motor2.compare("x2")==0) motor2 = "horizantalx2";
+            if(motor2.compare("y2")==0) motor2 = "horizantaly2";
+            outlog2 << "## " << motor2 << " motor movement command of " << distance2 << " steps stored." << endl;
+        }
+    }
+    void writeFinalMotorPosition()
+    {
+        if(isOpen2)
+        {
+            int x1 = 0;               // x keeps track of horizontal distance
+            x1 = getInitialX1();       // gets previous 'final' distance from log2 using ++ tag
+            x1 += getDeltaX1();        // gets total displacement of horizontal motor
+            int y1 = 0;               // y analagous to x for vertical motor using -- tag in log2 file
+            y1 = getInitialY1();
+
+            y1 += getDeltaY1();
+
+            int x2 = 0;
+
+            x2 = getInitialX2();
+
+            x2 += getDeltaX2();
+
+            int y2 = 0;
+
+            y2 = getInitialY2();
+
+            y2 = getDeltaY2();
+
+            char temp[64];
+            sprintf(temp, "++ Final horizontalx1 position: %i", x1);       // use ++ tags for horizontal motor
+            outlog2 << temp << endl;                                       // write final horizontal position to log2
+            sprintf(temp, "-- Final verticaly1 position: %i", y1);           // use -- for final vertical y1 position
+            outlog2 << temp << endl;
+
+            sprintf(temp, "<< Final horizontalx2 position: %i", x2);
+            outlog2 << temp << endl; // final hor. x2 position
+
+            sprintf(temp, ">> Final horizontaly2 position: %i", y2);
+            outlog2 << temp << endl;                                       // write final ver. y2 position
+        }
+    }
+    // RETURNS THE POSITION OF THE HORIZONTAL MOTOR AT THE BEGINNING OF
+    // THE CURRENT SESSION
+    int getInitialX1()
+    {
+        string temp, temp2;
+        if(isOpen2)
+        {
+            int startLine = getLast("++");                     // find line which contains initial x info in log2 file
+            inlog2.seekg(0);                                    // go to the beginning of the file
+            for(int i = 0; i < startLine; i++)                 // use getline() to navigate to correct line in log2 file
+                if(!inlog2.eof()) getline(inlog2, temp);
+            inlog2.clear();                                     // clear eof() bit
+            temp2 = temp.substr(0,30);
+            if(temp2.compare("++ Final horizontalx1 position: ")==0)           // if this is final horizontal movement line
+                temp = temp.substr(30);                                      // obtain the integer from the string
+            else temp = "0";                                                // else reset temp to 0
+        }
+        return string_to_int(temp);                                         // return integer form of last position
+    }
+    // ANALAGOUS TO getInitialX() FOR VERTICAL MOTOR
+    int getInitialY1()
+    {
+        string temp, temp2;
+        if(isOpen2)
+        {
+            int startLine = getLast("--");
+            inlog2.seekg(0);
+            for(int i = 0; i < startLine; i++)
+                getline(inlog2, temp);
+            inlog2.clear();
+            temp2 = temp.substr(0,28);
+            if(temp2.compare("-- Final verticaly1 position: ")==0)
+                temp = temp.substr(28);
+            else temp = "0";
+        }
+        return string_to_int(temp);
+    }
+    // ANALAGOUS TO getInitialX() FOR x2 MOTOR
+    int getInitialX2(){
+        string temp, temp2;
+        if(isOpen2){
+            int startLine = getLast("<<");
+            inlog2.seekg(0);
+            for(int i = 0; i < startLine; i++)
+                getline(inlog2, temp);
+            inlog2.clear();
+            temp2 = temp.substr(0,25);
+            if(temp2.compare("<< Final horizontalx2 position: ")==0)
+                temp = temp.substr(25);
+            else temp = "0";
+        }
+        return string_to_int(temp);
+    }
+
+    int getInitialY2(){
+        string temp, temp2;
+        if(isOpen2){
+            int startLine = getLast(">>");
+            inlog2.seekg(0);
+            for(int i = 0; i < startLine; i++)
+                getline(inlog2, temp);
+            inlog2.clear();
+            temp2 = temp.substr(0,25);
+            if(temp2.compare(">> Final horizontaly2 position: ")==0)
+                temp = temp.substr(25);
+            else temp = "0";
+        }
+        return string_to_int(temp);
+    }
+    // RETURNS THE TOTAL MOVEMENT OF THE HORIZONTAL MOTOR SINCE THE BEGINNING
+    // OF THIS SESSION
+    int getDeltaX1()
+    {
+        string moves, temp;
+        int result = 0, nextPos;                             // initialize to zero
+        moves = getCurrentMoves2();                            // get all moves of motors in current session
+        if(moves.length() == 0) return 0;                    // if no moves, return 0
+        while(moves.length() > 0)                            // while still more moves to consider
+        {
+            nextPos = moves.find(": ");                        // find beginning of next move (before ": "
+            moves = moves.substr(nextPos+2);                // delete previous command from list of commands
+            nextPos = moves.find(",");                      // find end of next move
+            temp = moves.substr(0,nextPos);                 // extract next move from string
+            if(temp.substr(0,2).compare("I1")==0)           // if this is a HORIZONTAL motor movement
+            {
+                temp = temp.substr(3);                        // remove I#M from command
+                result = result + string_to_int(temp);      // add magnitude to result
+            }
+            moves = moves.substr(nextPos+1);                // deletes command and comma just considered
+        }
+        return result;                                        // return magnitude of displacement of horizontal motor
+    }
+    // ANALAGOUS TO getDeltaX() FOR VERTICAL MOTOR
+    int getDeltaY1()
+    {
+        string moves, temp;
+        int result = 0;
+        moves = getCurrentMoves2();
+        if(moves.length() == 0) return 0;
+        while(moves.length() > 0)
+        {
+            int nextPos = moves.find(": ");
+            moves = moves.substr(nextPos+2);
+            nextPos = moves.find(",");
+            temp = moves.substr(0,nextPos);
+            if(temp.substr(0,2).compare("I2")==0)
+            {
+                temp = temp.substr(3);
+                result = result + string_to_int(temp);
+            }
+            moves = moves.substr(nextPos+1);
+        }
+        return result;
+    }
+    // ANALAGOUS TO getDeltaX2() FOR x2 MOTOR
+    int getDeltaX2(){
+        string moves, temp;
+        int result = 0;
+        moves = getCurrentMoves2();
+        if(moves.length() == 0) return 0;
+        while(moves.length() > 0){
+            int nextPos = moves.find(": ");
+            moves = moves.substr(nextPos+2);
+            nextPos = moves.find(",");
+            temp = moves.substr(0,nextPos);
+            if(temp.substr(0,2).compare("I3")==0){
+                temp = temp.substr(3);
+                result = result + string_to_int(temp);
+            }
+            moves = moves.substr(nextPos+1);
+        }
+        return result;}
+
+        int getDeltaY2(){
+            string moves, temp;
+            int result = 0;
+            moves = getCurrentMoves2();
+            if(moves.length() == 0) return 0;
+            while(moves.length() > 0){
+                int nextPos = moves.find(": ");
+                moves = moves.substr(nextPos+2);
+                nextPos = moves.find(",");
+                temp = moves.substr(0,nextPos);
+                if(temp.substr(0,2).compare("I4")==0){
+                    temp = temp.substr(3);
+                    result = result + string_to_int(temp);
+                }
+                moves = moves.substr(nextPos+1);
+            }
+            return result;
+    }
+    // RETURNS THE LINE NUMBER OF THE LAST KEY (RETURNS 0 IF NOT FOUND)
+    int getLast(const char* key)
+    {
+        int lastPos = 0;                                 // keeps track of last line in which 'key' appears in log2 file
+        if(isOpen2)
+        {
+            string temp;                                 // used to store current line in log2 file
+            int count = 0;                               // count is int used to store line index
+            inlog2.seekg(0);                              // start at beginning of log2 file
+            while(!inlog2.eof())                          // go to the end of the log2 file
+            {
+                count++;                                 // the first line is line 10
+                getline(inlog2, temp);                    // get the next line
+                if(temp.substr(0,2).compare(key) == 0)   // if the first two characters of this line match the key
+                    lastPos = count;                     // record which line it is
+            }
+            inlog2.clear();                                // clear the eof bit from the filestream
+        }
+        return lastPos;                                   // returns the LAST line on which key is found
+    }
+    // RETURNS A STRING OF ALL THE MOVE COMMANDS ENTERED THIS INSTANCE OF PROGRAM
+    string getCurrentMoves2()
+    {
+        string result = "";
+        if(isOpen2)
+        {
+            int count = 0;
+            int start = getLast("**");                                          // find out which line is the first of this instance
+            string temp = "";
+            inlog2.seekg(0);                                                     // start at beginning of file
+            while(!inlog2.eof())                                                 // don't go past the end of the file
+            {
+                count++;                                                        // keep track of lines
+                getline(inlog2, temp);                                           // get the current line
+                // if we are viewing the current instance AND we are viewing a motor move
+                if(count >= start && temp.substr(0,2).compare("&&") == 0)
+                    result.append(temp);  // grab the line
+            }
+            inlog2.clear();  // clear the eof bit
+        }
+        return result;  // return list of commands in one string
+    }
+};
+
+
+
+
 
 class VXM_interface2
 {
@@ -513,6 +827,9 @@ class VXM_interface2
                                          // string for command to be send
 
         command2 = "";
+
+        vxmLog2 = new Log2();                        // log object defined to log motor movements
+        vxmLog2->writeTime();	                   // write a time stamp to the log
 
 
         //		OPEN PORT AND PREPARE STEPPER MOTOR FOR USE		//
@@ -532,6 +849,7 @@ class VXM_interface2
                 usleep(1);
         write(port_fd2, "C", 1);		          // clear RAM
                 usleep(1);
+
 
 
     }
@@ -602,7 +920,7 @@ class VXM_interface2
 
                                                                                   // CONFIRM NEW COMMAND
 
-            //vxmLog->writeMotorMove(motor, distance);                               // write new move command to log
+            vxmLog2->writeMotorMove(motor2, distance2);                               // write new move command to log
     }
 
 
@@ -632,6 +950,8 @@ class VXM_interface2
         write(port_fd2, "R", 1);
 
 
+                vxmLog2->writeSentCommandTolog2(command2);
+                vxmLog2->writeFinalMotorPosition(); //new
     }
 
 
@@ -646,6 +966,7 @@ class VXM_interface2
 
                                                                       // WRITE THE FINAL MOTOR POSITIONS IN THE LOG FILE
 
+        vxmLog2->writeSentCommandTolog2("");
                                                                       // WRITE A BLANK LINE TO LOG FILE FOR SEPERATION OF DATA
     }
 
@@ -659,4 +980,6 @@ class VXM_interface2
             // current command, ready to be sent to stepper motor
 
         char buf[256];		// buffer for reading from VXM
+
+        Log2 *vxmLog2;
 };
