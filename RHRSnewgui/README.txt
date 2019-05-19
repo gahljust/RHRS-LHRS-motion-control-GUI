@@ -17,7 +17,11 @@ make
 
 
 
-To open the gui run
+To open the gui from the gui directory run
+
+chmod +x rungui 
+
+chmod +x cam.sh ./rungui
 
 ./rungui
 
