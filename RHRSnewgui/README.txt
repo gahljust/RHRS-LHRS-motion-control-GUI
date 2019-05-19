@@ -21,7 +21,7 @@ To open the gui from the gui directory run
 
 chmod +x rungui 
 
-chmod +x cam.sh ./rungui
+chmod +x cam.sh
 
 ./rungui
 
