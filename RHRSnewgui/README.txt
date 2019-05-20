@@ -70,7 +70,7 @@ Motor 3  second A_T detector x-axis
 Motor 4  second A_T detector y-axis
 
 The code for the velmex motors can be found in the VXM_interface_bare.cpp file.
-See the vxm_user_man.pdf for more information on wiring or coding for the welmex motors.
+See the vxm_user_man.pdf for more information on wiring or coding for the velmex motors.
 
 CAMERA:
 
