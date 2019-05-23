@@ -17,11 +17,7 @@ make
 
 
 
-To open the gui from the gui directory run
-
-chmod +x rungui 
-
-chmod +x cam.sh
+To open the gui run
 
 ./rungui
 
@@ -70,20 +66,6 @@ Motor 3  second A_T detector x-axis
 Motor 4  second A_T detector y-axis
 
 The code for the velmex motors can be found in the VXM_interface_bare.cpp file.
-See the vxm_user_man.pdf for more information on wiring or coding for the velmex motors.
-
-CAMERA:
-
-On the client computer controlling the pi remotly VLC needs to be installed, this can be done from the command line if using a unix type system 
-
-sudo apt-get vlc
-
-Or it can be installed for the proper platform at this link https://www.videolan.org/vlc/ 05/20/2019.
-
-When the radio button for the camera is clicked no screen will pop up on the pi itself instead the feed streams using vlc. On the client computer vlc needs to be launched and connected to the stream from the command line or terminal. at rtsp://<pi's address>:8554/. For example on the mac computer used for development, the following code was ran from the terminal.
-
-/Applications/VLC.app/Contents/MacOS/VLC rtsp://134.50.103.210:8554/
-
-Where the first part /Applications/.../VLC calls VLC and 134.50.103.210 was the pi's local address. This opens up a streaming window on the client computer. The important part is connecting to the pi with the rtsp://<pi's address>:8554/ command.
+See the vxm_user_man.pdf for more information on wiring or coding for the welmex motors.
 
 All files cited in the Read me file can be found in the GUI folder.

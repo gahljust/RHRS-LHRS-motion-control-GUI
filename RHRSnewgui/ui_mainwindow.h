@@ -64,8 +64,8 @@ public:
     QLabel *lblCmdOut;
     QVBoxLayout *verticalLayout_11;
     QHBoxLayout *horizontalLayout_5;
-    QPushButton *btnSetMainSpeed;
     QPushButton *btnSetA_tSpeed;
+    QPushButton *btnSetMainSpeed;
     QPushButton *btnKill;
     QPushButton *btnQuit;
     QPushButton *btnHome;
@@ -399,15 +399,17 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        btnSetMainSpeed = new QPushButton(centralWidget);
-        btnSetMainSpeed->setObjectName(QStringLiteral("btnSetMainSpeed"));
-
-        horizontalLayout_5->addWidget(btnSetMainSpeed);
-
         btnSetA_tSpeed = new QPushButton(centralWidget);
         btnSetA_tSpeed->setObjectName(QStringLiteral("btnSetA_tSpeed"));
+        btnSetA_tSpeed->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:1, y1:0.483, x2:0, y2:0.505955, stop:0 rgba(56, 0, 255, 255), stop:1 rgba(255, 0, 208, 255))"));
 
         horizontalLayout_5->addWidget(btnSetA_tSpeed);
+
+        btnSetMainSpeed = new QPushButton(centralWidget);
+        btnSetMainSpeed->setObjectName(QStringLiteral("btnSetMainSpeed"));
+        btnSetMainSpeed->setStyleSheet(QStringLiteral("background-color:qlineargradient(spread:pad, x1:1, y1:0.506, x2:0, y2:0.505955, stop:0 rgba(0, 246, 255, 255), stop:1 rgba(255, 255, 0, 255))"));
+
+        horizontalLayout_5->addWidget(btnSetMainSpeed);
 
         btnKill = new QPushButton(centralWidget);
         btnKill->setObjectName(QStringLiteral("btnKill"));
@@ -599,10 +601,10 @@ public:
         btnYAxis->setText(QApplication::translate("MainWindow", "Y-Axis", nullptr));
         label->setText(QApplication::translate("MainWindow", "Input Voltage:", nullptr));
         lblVolts->setText(QString());
-        label_2->setText(QApplication::translate("MainWindow", "Last Commaned", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Last Command", nullptr));
         lblCmdOut->setText(QString());
-        btnSetMainSpeed->setText(QApplication::translate("MainWindow", "Set Main Speeds", nullptr));
         btnSetA_tSpeed->setText(QApplication::translate("MainWindow", "Set A_T Speeds", nullptr));
+        btnSetMainSpeed->setText(QApplication::translate("MainWindow", "Set Main Speeds", nullptr));
         btnKill->setText(QApplication::translate("MainWindow", "Kill", nullptr));
         btnQuit->setText(QApplication::translate("MainWindow", "Quit", nullptr));
         btnHome->setText(QApplication::translate("MainWindow", "Go Home", nullptr));

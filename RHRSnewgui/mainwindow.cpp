@@ -60,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->btnPanLeft->setVisible(false);
     ui->btnTiltUp->setVisible(false);
     ui->btnTiltDown->setVisible(false);
+    ui->btnKill->setStyleSheet("background-color: red");
 
 
     QTimer *timer = new QTimer(this);

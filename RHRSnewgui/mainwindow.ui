@@ -507,7 +507,7 @@ border: none;
 </string>
           </property>
           <property name="text">
-           <string>Last Commaned</string>
+           <string>Last Command</string>
           </property>
          </widget>
         </item>
@@ -533,16 +533,22 @@ border: none;
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
-         <widget class="QPushButton" name="btnSetMainSpeed">
+         <widget class="QPushButton" name="btnSetA_tSpeed">
+          <property name="styleSheet">
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0.483, x2:0, y2:0.505955, stop:0 rgba(56, 0, 255, 255), stop:1 rgba(255, 0, 208, 255))</string>
+          </property>
           <property name="text">
-           <string>Set Main Speeds</string>
+           <string>Set A_T Speeds</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btnSetA_tSpeed">
+         <widget class="QPushButton" name="btnSetMainSpeed">
+          <property name="styleSheet">
+           <string notr="true">background-color:qlineargradient(spread:pad, x1:1, y1:0.506, x2:0, y2:0.505955, stop:0 rgba(0, 246, 255, 255), stop:1 rgba(255, 255, 0, 255))</string>
+          </property>
           <property name="text">
-           <string>Set A_T Speeds</string>
+           <string>Set Main Speeds</string>
           </property>
          </widget>
         </item>
