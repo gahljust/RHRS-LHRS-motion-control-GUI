@@ -607,15 +607,15 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter xPainter(this);
     xPainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));                    //X axis slider
     xPainter.setBrush(QBrush(Qt::yellow,Qt::SolidPattern));
-    xPainter.drawRect(530-(y*6),424,38,136);                                      // this will move the slider and motor to the right with positive x values
+    xPainter.drawRect(530+(y*13),424,38,136);                                      // this will move the slider and motor to the right with positive x values
     xPainter.setBrush(QBrush(Qt::blue,Qt::SolidPattern));                             //x axis motor
-    xPainter.drawRect(538-(y*6),402,22.6,22);
+    xPainter.drawRect(538+(y*13),402,22.6,22);
 
 
     QPainter rotarypainter(this);                                                     //Paints gray rotory motor
     rotarypainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     rotarypainter.setBrush(QBrush(Qt::gray,Qt::SolidPattern));
-    rotarypainter.drawRect(530-(y*6),512-(x*6),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
+    rotarypainter.drawRect(510+(y*13),512-(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
 
 
     QPainter mainaxiespainter(this);                                                //axies for main
