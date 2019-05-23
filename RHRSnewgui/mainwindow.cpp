@@ -61,6 +61,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->btnTiltUp->setVisible(false);
     ui->btnTiltDown->setVisible(false);
     ui->btnKill->setStyleSheet("background-color: red");
+    ui->btnAdvanced->setStyleSheet("background-color: rgb(97, 240, 143)");
+    ui->btnAverageUser->setStyleSheet("background-color: rgb(146, 240, 45);");
 
 
     QTimer *timer = new QTimer(this);
