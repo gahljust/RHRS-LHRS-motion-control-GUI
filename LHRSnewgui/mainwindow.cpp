@@ -55,6 +55,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->lblCmdCheckDesc->setVisible(false);
     ui->lblCustomCmd->setVisible(false);
     ui->btnHome->setVisible(false);
+    ui->btnKill->setStyleSheet("background-color: red");
+
 
     ui->btnPanRight->setVisible(false);
     ui->btnPanLeft->setVisible(false);
