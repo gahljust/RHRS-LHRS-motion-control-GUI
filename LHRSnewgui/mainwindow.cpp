@@ -617,7 +617,7 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter rotarypainter(this);                                                     //Paints gray rotory motor
     rotarypainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     rotarypainter.setBrush(QBrush(Qt::gray,Qt::SolidPattern));
-    rotarypainter.drawRect(758-(y*6),512-(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
+    rotarypainter.drawRect(758-(y*13),424-(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
 
 
     QPainter mainaxiespainter(this);                                                //axies for main
