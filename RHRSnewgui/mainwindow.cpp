@@ -618,7 +618,7 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter rotarypainter(this);                                                     //Paints gray rotory motor
     rotarypainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     rotarypainter.setBrush(QBrush(Qt::gray,Qt::SolidPattern));
-    rotarypainter.drawRect(510+(y*13),512-(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
+    rotarypainter.drawRect(530+(y*13),424+(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
 
 
     QPainter mainaxiespainter(this);                                                //axies for main
@@ -630,10 +630,10 @@ void MainWindow::paintEvent(QPaintEvent *)
 
     QPainter ataxiespainter(this);                                          //axies for A_t's
     ataxiespainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
-    ataxiespainter.drawLine(395,420,395,340);
+    ataxiespainter.drawLine(435,420,435,340);
     ataxiespainter.drawLine(375,400,455,400);
-    ataxiespainter.drawText(380,350,"Y");
-    ataxiespainter.drawText(445,415,"X");
+    ataxiespainter.drawText(420,350,"X");
+    ataxiespainter.drawText(380,415,"Y");
 
     QPainter mainelectrons(this);                                          //Lines for main electrons
     mainelectrons.setPen(QPen(Qt::red,4,Qt::DashLine,Qt::RoundCap));
@@ -669,12 +669,12 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter At1painter(this);                                               //draws first rectangle for A_t 1
     At1painter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     At1painter.setBrush(QBrush(Qt::magenta,Qt::DiagCrossPattern));
-    At1painter.drawRect(75+(x1*6),400-(y1*6),120,40);
+    At1painter.drawRect(145-(y1*6),400-(x1*6),120,40);
 
     QPainter At2painter(this);                                          //draws second rectangle for A _t 2
     At2painter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     At2painter.setBrush(QBrush(Qt::blue,Qt::DiagCrossPattern));
-    At2painter.drawRect(145+(x2*6),460-(y2*6),120,40);
+    At2painter.drawRect(145-(y2*6),460-(x2*6),120,40);
 
 
                                                          //Different fonts used in text drawing

@@ -617,7 +617,7 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter rotarypainter(this);                                                     //Paints gray rotory motor
     rotarypainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     rotarypainter.setBrush(QBrush(Qt::gray,Qt::SolidPattern));
-    rotarypainter.drawRect(758-(y*13),424-(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
+    rotarypainter.drawRect(758-(y*13),424+(x*9),38,48);                        // this will move the rotary motor up and to the right with positve x and y values
 
 
     QPainter mainaxiespainter(this);                                                //axies for main
@@ -668,12 +668,12 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter At1painter(this);                                               //draws first rectangle for A_t 1
     At1painter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     At1painter.setBrush(QBrush(Qt::magenta,Qt::DiagCrossPattern));
-    At1painter.drawRect(75+(x1*6),400-(y1*6),120,40);
+    At1painter.drawRect(145-(y1*6),400-(x1*6),120,40);
 
     QPainter At2painter(this);                                          //draws second rectangle for A _t 2
     At2painter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
     At2painter.setBrush(QBrush(Qt::blue,Qt::DiagCrossPattern));
-    At2painter.drawRect(145+(x2*6),460-(y2*6),120,40);
+    At2painter.drawRect(145-(y2*6),460-(x2*6),120,40);
 
 
                                                          //Different fonts used in text drawing
