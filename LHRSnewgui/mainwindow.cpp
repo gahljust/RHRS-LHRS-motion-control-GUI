@@ -132,7 +132,7 @@ void MainWindow::on_btnXAxis_clicked()   //button on right controls horizontal m
 {
     whichMotor = "h";
     InputBox *inp2 = new InputBox(*this,
-                                  "Horizontal Motor",
+                                  "Horizontal Main Motor",
                                   "How many centimeters would you like to move?",
                                   "",
                                   &MainWindow::storeCommand);

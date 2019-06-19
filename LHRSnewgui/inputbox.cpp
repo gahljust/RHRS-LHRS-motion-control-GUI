@@ -73,13 +73,13 @@ void InputBox::on_buttonBox_accepted()
 {
 
 
-    if(this->windowTitle().contains("Vertical") || this->windowTitle().contains("Horizontal"))
+    if(this->windowTitle().contains("Vertical") || this->windowTitle().contains("Horizontal A_T"))
     {
 
         QString input = ui->newMoveCmd->text();
 
         double cm = input.split(" ")[0].toDouble();     //2000 steps/cm
-        int steps = (int)(cm*2000);
+        int steps = (int)(cm*4000);
 
         if(cm != 0)
         {
@@ -146,7 +146,28 @@ void InputBox::on_buttonBox_accepted()
             messageBox.critical(0,"Error","Incorrect Password");
         }
     }
-    //  std::cout << ss.toStdString() << std::endl;
+
+    else if(this->windowTitle().contains("Horizontal Main"));
+
+        QString input = ui->newMoveCmd->text();
+
+        double cm = input.split(" ")[0].toDouble();     //2000 steps/cm
+        int steps = (int)(cm*2000);
+
+        if(cm != 0)
+        {
+            QString QcmString = QString::number(cm);
+
+            QString QstepString = QString::number(steps);
+            std::string stepString = QstepString.toStdString();
+
+            QMessageBox::StandardButton reply;
+            reply = QMessageBox::question(this, "Confirmation","Are you sure you want the move the motor " + QcmString + " cm?",QMessageBox::Yes|QMessageBox::No);
+            if (reply == QMessageBox::Yes)
+            {
+                (parent_window.*m_func)(stepString);              //first parenthesis is
+            }                                                     // change title function pointer,
+        }                                                        // second is text contained in the type in
 
 }
 
