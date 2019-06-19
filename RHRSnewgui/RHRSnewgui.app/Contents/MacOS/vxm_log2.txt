@@ -11,3 +11,5 @@
 -- Final verticaly1 position: 0
 << Final horizontalx2 position: 130000
 >> Final horizontaly2 position: 0
+** 6/7/2019 @ 18:53
+** 6/7/2019 @ 18:55

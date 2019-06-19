@@ -205,7 +205,7 @@ border: black;</string>
 background: none;</string>
           </property>
           <property name="text">
-           <string>Position A_T 1</string>
+           <string>Position A_T IN</string>
           </property>
          </widget>
         </item>
@@ -302,7 +302,7 @@ background: none;</string>
 background: none;</string>
           </property>
           <property name="text">
-           <string>Position A_T 2</string>
+           <string>Position A_T OUT</string>
           </property>
          </widget>
         </item>

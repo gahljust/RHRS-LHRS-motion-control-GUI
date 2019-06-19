@@ -271,15 +271,15 @@ void MainWindow::readLabJack()
 
 
     double voltsToCmRatio = inputVoltage/54;
-    double atvoltsToCmRatio = inputVoltage/10.2 ;   //total range of travel is 4 inches (10.2 cm) for one set of transducers and 54 cm for another set.
+    double atvoltsToCmRatio = inputVoltage/63.5 ;   //total range of travel is 4 inches (10.2 cm) for one set of transducers and 54 cm for another set.
 
     double xdistance = xvolts/voltsToCmRatio;
     double ydistance = yvolts/voltsToCmRatio;
 
     double x1distance = x1volts/atvoltsToCmRatio;
-    double y1distance = y1volts/atvoltsToCmRatio;
+    double y1distance = y1volts/voltsToCmRatio;
     double x2distance = x2volts/atvoltsToCmRatio;
-    double y2distance = y2volts/atvoltsToCmRatio;
+    double y2distance = y2volts/voltsToCmRatio;
 
     if(xdistance < .0000001)
     {

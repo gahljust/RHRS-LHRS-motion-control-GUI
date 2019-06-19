@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.2
+** Created by: Qt User Interface Compiler version 5.12.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -95,19 +95,19 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->setEnabled(true);
         MainWindow->resize(979, 620);
-        MainWindow->setStyleSheet(QStringLiteral(""));
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         actionOpen = new QAction(MainWindow);
-        actionOpen->setObjectName(QStringLiteral("actionOpen"));
+        actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionSave = new QAction(MainWindow);
-        actionSave->setObjectName(QStringLiteral("actionSave"));
+        actionSave->setObjectName(QString::fromUtf8("actionSave"));
         actionWin = new QAction(MainWindow);
-        actionWin->setObjectName(QStringLiteral("actionWin"));
+        actionWin->setObjectName(QString::fromUtf8("actionWin"));
         centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        centralWidget->setStyleSheet(QLatin1String("QLabel\n"
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        centralWidget->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
 "	border: 2px solid gray;\n"
 "	padding: 0 8px;\n"
@@ -166,30 +166,30 @@ public:
         verticalLayout_10 = new QVBoxLayout(centralWidget);
         verticalLayout_10->setSpacing(6);
         verticalLayout_10->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
+        verticalLayout_10->setObjectName(QString::fromUtf8("verticalLayout_10"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(12, 12, 12, 12);
         rdbCam = new QRadioButton(centralWidget);
-        rdbCam->setObjectName(QStringLiteral("rdbCam"));
+        rdbCam->setObjectName(QString::fromUtf8("rdbCam"));
         rdbCam->setAutoExclusive(false);
 
         horizontalLayout->addWidget(rdbCam);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(12, 12, 12, 12);
         label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setStyleSheet(QLatin1String("background: none;\n"
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setStyleSheet(QString::fromUtf8("background: none;\n"
 "border: black;"));
 
         verticalLayout->addWidget(label_3);
 
         lblTheta = new QLabel(centralWidget);
-        lblTheta->setObjectName(QStringLiteral("lblTheta"));
+        lblTheta->setObjectName(QString::fromUtf8("lblTheta"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -201,15 +201,15 @@ public:
 
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setSpacing(6);
-        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
         horizontalLayout_9->setContentsMargins(-1, 0, -1, -1);
         btnRotary = new QPushButton(centralWidget);
-        btnRotary->setObjectName(QStringLiteral("btnRotary"));
+        btnRotary->setObjectName(QString::fromUtf8("btnRotary"));
         sizePolicy.setHeightForWidth(btnRotary->sizePolicy().hasHeightForWidth());
         btnRotary->setSizePolicy(sizePolicy);
         btnRotary->setMinimumSize(QSize(75, 0));
         btnRotary->setMaximumSize(QSize(75, 16777215));
-        btnRotary->setStyleSheet(QStringLiteral(""));
+        btnRotary->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_9->addWidget(btnRotary);
 
@@ -221,17 +221,17 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(12, 12, 12, 12);
         label_5 = new QLabel(centralWidget);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setStyleSheet(QLatin1String("border: none;\n"
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setStyleSheet(QString::fromUtf8("border: none;\n"
 "background: none;"));
 
         verticalLayout_2->addWidget(label_5);
 
         at1lbl = new QLabel(centralWidget);
-        at1lbl->setObjectName(QStringLiteral("at1lbl"));
+        at1lbl->setObjectName(QString::fromUtf8("at1lbl"));
         sizePolicy.setHeightForWidth(at1lbl->sizePolicy().hasHeightForWidth());
         at1lbl->setSizePolicy(sizePolicy);
         at1lbl->setMinimumSize(QSize(150, 50));
@@ -240,23 +240,23 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, -1, -1, -1);
         btnx1 = new QPushButton(centralWidget);
-        btnx1->setObjectName(QStringLiteral("btnx1"));
+        btnx1->setObjectName(QString::fromUtf8("btnx1"));
         sizePolicy.setHeightForWidth(btnx1->sizePolicy().hasHeightForWidth());
         btnx1->setSizePolicy(sizePolicy);
         btnx1->setMinimumSize(QSize(75, 0));
-        btnx1->setStyleSheet(QStringLiteral(""));
+        btnx1->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_4->addWidget(btnx1);
 
         btny1 = new QPushButton(centralWidget);
-        btny1->setObjectName(QStringLiteral("btny1"));
+        btny1->setObjectName(QString::fromUtf8("btny1"));
         sizePolicy.setHeightForWidth(btny1->sizePolicy().hasHeightForWidth());
         btny1->setSizePolicy(sizePolicy);
         btny1->setMinimumSize(QSize(75, 0));
-        btny1->setStyleSheet(QStringLiteral(""));
+        btny1->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_4->addWidget(btny1);
 
@@ -268,17 +268,17 @@ public:
 
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(12, 12, 12, 12);
         label_6 = new QLabel(centralWidget);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setStyleSheet(QLatin1String("border: none;\n"
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setStyleSheet(QString::fromUtf8("border: none;\n"
 "background: none;"));
 
         verticalLayout_3->addWidget(label_6);
 
         at2lbl = new QLabel(centralWidget);
-        at2lbl->setObjectName(QStringLiteral("at2lbl"));
+        at2lbl->setObjectName(QString::fromUtf8("at2lbl"));
         sizePolicy.setHeightForWidth(at2lbl->sizePolicy().hasHeightForWidth());
         at2lbl->setSizePolicy(sizePolicy);
         at2lbl->setMinimumSize(QSize(150, 50));
@@ -287,10 +287,10 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, -1, -1, -1);
         btnx2 = new QPushButton(centralWidget);
-        btnx2->setObjectName(QStringLiteral("btnx2"));
+        btnx2->setObjectName(QString::fromUtf8("btnx2"));
         sizePolicy.setHeightForWidth(btnx2->sizePolicy().hasHeightForWidth());
         btnx2->setSizePolicy(sizePolicy);
         btnx2->setMinimumSize(QSize(75, 0));
@@ -298,7 +298,7 @@ public:
         horizontalLayout_3->addWidget(btnx2);
 
         btny2 = new QPushButton(centralWidget);
-        btny2->setObjectName(QStringLiteral("btny2"));
+        btny2->setObjectName(QString::fromUtf8("btny2"));
 
         horizontalLayout_3->addWidget(btny2);
 
@@ -310,17 +310,17 @@ public:
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setSpacing(6);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(12, 12, 12, 12);
         label_4 = new QLabel(centralWidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setStyleSheet(QLatin1String("background: none;\n"
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setStyleSheet(QString::fromUtf8("background: none;\n"
 "border: black;"));
 
         verticalLayout_4->addWidget(label_4);
 
         lblOrigin = new QLabel(centralWidget);
-        lblOrigin->setObjectName(QStringLiteral("lblOrigin"));
+        lblOrigin->setObjectName(QString::fromUtf8("lblOrigin"));
         sizePolicy.setHeightForWidth(lblOrigin->sizePolicy().hasHeightForWidth());
         lblOrigin->setSizePolicy(sizePolicy);
         lblOrigin->setMinimumSize(QSize(150, 50));
@@ -330,23 +330,23 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, -1, -1, -1);
         btnXAxis = new QPushButton(centralWidget);
-        btnXAxis->setObjectName(QStringLiteral("btnXAxis"));
+        btnXAxis->setObjectName(QString::fromUtf8("btnXAxis"));
         btnXAxis->setMinimumSize(QSize(75, 0));
         btnXAxis->setMaximumSize(QSize(75, 16777215));
-        btnXAxis->setStyleSheet(QStringLiteral(""));
+        btnXAxis->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(btnXAxis);
 
         btnYAxis = new QPushButton(centralWidget);
-        btnYAxis->setObjectName(QStringLiteral("btnYAxis"));
+        btnYAxis->setObjectName(QString::fromUtf8("btnYAxis"));
         sizePolicy.setHeightForWidth(btnYAxis->sizePolicy().hasHeightForWidth());
         btnYAxis->setSizePolicy(sizePolicy);
         btnYAxis->setMinimumSize(QSize(75, 0));
         btnYAxis->setMaximumSize(QSize(75, 16777215));
-        btnYAxis->setStyleSheet(QStringLiteral(""));
+        btnYAxis->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(btnYAxis);
 
@@ -358,31 +358,31 @@ public:
 
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(12, 12, 12, 12);
         label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setStyleSheet(QLatin1String("background: none;\n"
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setStyleSheet(QString::fromUtf8("background: none;\n"
 "border: none;\n"
 ""));
 
         verticalLayout_5->addWidget(label);
 
         lblVolts = new QLabel(centralWidget);
-        lblVolts->setObjectName(QStringLiteral("lblVolts"));
+        lblVolts->setObjectName(QString::fromUtf8("lblVolts"));
 
         verticalLayout_5->addWidget(lblVolts);
 
         label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setStyleSheet(QLatin1String("background: none;\n"
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setStyleSheet(QString::fromUtf8("background: none;\n"
 "border: none;\n"
 ""));
 
         verticalLayout_5->addWidget(label_2);
 
         lblCmdOut = new QLabel(centralWidget);
-        lblCmdOut->setObjectName(QStringLiteral("lblCmdOut"));
+        lblCmdOut->setObjectName(QString::fromUtf8("lblCmdOut"));
 
         verticalLayout_5->addWidget(lblCmdOut);
 
@@ -394,35 +394,35 @@ public:
 
         verticalLayout_11 = new QVBoxLayout();
         verticalLayout_11->setSpacing(6);
-        verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
+        verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
         verticalLayout_11->setContentsMargins(-1, 0, -1, 0);
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
-        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         btnSetA_tSpeed = new QPushButton(centralWidget);
-        btnSetA_tSpeed->setObjectName(QStringLiteral("btnSetA_tSpeed"));
-        btnSetA_tSpeed->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:1, y1:0.483, x2:0, y2:0.505955, stop:0 rgba(56, 0, 255, 255), stop:1 rgba(255, 0, 208, 255))"));
+        btnSetA_tSpeed->setObjectName(QString::fromUtf8("btnSetA_tSpeed"));
+        btnSetA_tSpeed->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:1, y1:0.483, x2:0, y2:0.505955, stop:0 rgba(56, 0, 255, 255), stop:1 rgba(255, 0, 208, 255))"));
 
         horizontalLayout_5->addWidget(btnSetA_tSpeed);
 
         btnSetMainSpeed = new QPushButton(centralWidget);
-        btnSetMainSpeed->setObjectName(QStringLiteral("btnSetMainSpeed"));
-        btnSetMainSpeed->setStyleSheet(QStringLiteral("background-color:qlineargradient(spread:pad, x1:1, y1:0.506, x2:0, y2:0.505955, stop:0 rgba(0, 246, 255, 255), stop:1 rgba(255, 255, 0, 255))"));
+        btnSetMainSpeed->setObjectName(QString::fromUtf8("btnSetMainSpeed"));
+        btnSetMainSpeed->setStyleSheet(QString::fromUtf8("background-color:qlineargradient(spread:pad, x1:1, y1:0.506, x2:0, y2:0.505955, stop:0 rgba(0, 246, 255, 255), stop:1 rgba(255, 255, 0, 255))"));
 
         horizontalLayout_5->addWidget(btnSetMainSpeed);
 
         btnKill = new QPushButton(centralWidget);
-        btnKill->setObjectName(QStringLiteral("btnKill"));
+        btnKill->setObjectName(QString::fromUtf8("btnKill"));
 
         horizontalLayout_5->addWidget(btnKill);
 
         btnQuit = new QPushButton(centralWidget);
-        btnQuit->setObjectName(QStringLiteral("btnQuit"));
+        btnQuit->setObjectName(QString::fromUtf8("btnQuit"));
 
         horizontalLayout_5->addWidget(btnQuit);
 
         btnHome = new QPushButton(centralWidget);
-        btnHome->setObjectName(QStringLiteral("btnHome"));
+        btnHome->setObjectName(QString::fromUtf8("btnHome"));
 
         horizontalLayout_5->addWidget(btnHome);
 
@@ -431,7 +431,7 @@ public:
         horizontalLayout_5->addItem(horizontalSpacer_8);
 
         btnAdvanced = new QPushButton(centralWidget);
-        btnAdvanced->setObjectName(QStringLiteral("btnAdvanced"));
+        btnAdvanced->setObjectName(QString::fromUtf8("btnAdvanced"));
 
         horizontalLayout_5->addWidget(btnAdvanced);
 
@@ -440,38 +440,38 @@ public:
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         btnStoreCmd = new QPushButton(centralWidget);
-        btnStoreCmd->setObjectName(QStringLiteral("btnStoreCmd"));
+        btnStoreCmd->setObjectName(QString::fromUtf8("btnStoreCmd"));
         btnStoreCmd->setEnabled(true);
 
         horizontalLayout_6->addWidget(btnStoreCmd);
 
         btnReadCmd = new QPushButton(centralWidget);
-        btnReadCmd->setObjectName(QStringLiteral("btnReadCmd"));
+        btnReadCmd->setObjectName(QString::fromUtf8("btnReadCmd"));
         btnReadCmd->setEnabled(true);
 
         horizontalLayout_6->addWidget(btnReadCmd);
 
         btnSendCmd = new QPushButton(centralWidget);
-        btnSendCmd->setObjectName(QStringLiteral("btnSendCmd"));
+        btnSendCmd->setObjectName(QString::fromUtf8("btnSendCmd"));
 
         horizontalLayout_6->addWidget(btnSendCmd);
 
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setSpacing(6);
-        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(-1, 0, 0, -1);
         lblCustomCmd = new QLabel(centralWidget);
-        lblCustomCmd->setObjectName(QStringLiteral("lblCustomCmd"));
-        lblCustomCmd->setStyleSheet(QLatin1String("\n"
+        lblCustomCmd->setObjectName(QString::fromUtf8("lblCustomCmd"));
+        lblCustomCmd->setStyleSheet(QString::fromUtf8("\n"
 "border: none;\n"
 "background:none;"));
 
         verticalLayout_6->addWidget(lblCustomCmd);
 
         lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -485,17 +485,17 @@ public:
 
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setSpacing(6);
-        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         verticalLayout_7->setContentsMargins(-1, -1, 0, -1);
         lblCmdCheckDesc = new QLabel(centralWidget);
-        lblCmdCheckDesc->setObjectName(QStringLiteral("lblCmdCheckDesc"));
-        lblCmdCheckDesc->setStyleSheet(QLatin1String("background: none;\n"
+        lblCmdCheckDesc->setObjectName(QString::fromUtf8("lblCmdCheckDesc"));
+        lblCmdCheckDesc->setStyleSheet(QString::fromUtf8("background: none;\n"
 "border: none;"));
 
         verticalLayout_7->addWidget(lblCmdCheckDesc);
 
         lblCmdCheck = new QLabel(centralWidget);
-        lblCmdCheck->setObjectName(QStringLiteral("lblCmdCheck"));
+        lblCmdCheck->setObjectName(QString::fromUtf8("lblCmdCheck"));
 
         verticalLayout_7->addWidget(lblCmdCheck);
 
@@ -507,7 +507,7 @@ public:
         horizontalLayout_6->addItem(horizontalSpacer);
 
         btnAverageUser = new QPushButton(centralWidget);
-        btnAverageUser->setObjectName(QStringLiteral("btnAverageUser"));
+        btnAverageUser->setObjectName(QString::fromUtf8("btnAverageUser"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -524,34 +524,34 @@ public:
         verticalLayout_10->addLayout(verticalLayout_11);
 
         Camerabtnwid = new QWidget(centralWidget);
-        Camerabtnwid->setObjectName(QStringLiteral("Camerabtnwid"));
+        Camerabtnwid->setObjectName(QString::fromUtf8("Camerabtnwid"));
         QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(Camerabtnwid->sizePolicy().hasHeightForWidth());
         Camerabtnwid->setSizePolicy(sizePolicy3);
         Camerabtnwid->setMaximumSize(QSize(50, 50));
-        Camerabtnwid->setStyleSheet(QStringLiteral(""));
+        Camerabtnwid->setStyleSheet(QString::fromUtf8(""));
         verticalLayout_9 = new QVBoxLayout(Camerabtnwid);
         verticalLayout_9->setSpacing(6);
         verticalLayout_9->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
         verticalLayout_9->setContentsMargins(-1, -1, -1, 1);
         btnTiltUp = new QPushButton(Camerabtnwid);
-        btnTiltUp->setObjectName(QStringLiteral("btnTiltUp"));
+        btnTiltUp->setObjectName(QString::fromUtf8("btnTiltUp"));
 
         verticalLayout_9->addWidget(btnTiltUp);
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(6);
-        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         btnPanRight = new QPushButton(Camerabtnwid);
-        btnPanRight->setObjectName(QStringLiteral("btnPanRight"));
+        btnPanRight->setObjectName(QString::fromUtf8("btnPanRight"));
 
         horizontalLayout_8->addWidget(btnPanRight);
 
         btnPanLeft = new QPushButton(Camerabtnwid);
-        btnPanLeft->setObjectName(QStringLiteral("btnPanLeft"));
+        btnPanLeft->setObjectName(QString::fromUtf8("btnPanLeft"));
 
         horizontalLayout_8->addWidget(btnPanLeft);
 
@@ -559,7 +559,7 @@ public:
         verticalLayout_9->addLayout(horizontalLayout_8);
 
         btnTiltDown = new QPushButton(Camerabtnwid);
-        btnTiltDown->setObjectName(QStringLiteral("btnTiltDown"));
+        btnTiltDown->setObjectName(QString::fromUtf8("btnTiltDown"));
 
         verticalLayout_9->addWidget(btnTiltDown);
 

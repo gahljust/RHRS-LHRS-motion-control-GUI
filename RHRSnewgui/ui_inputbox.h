@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'inputbox.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.2
+** Created by: Qt User Interface Compiler version 5.12.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -50,19 +50,19 @@ public:
     void setupUi(QDialog *InputBox)
     {
         if (InputBox->objectName().isEmpty())
-            InputBox->setObjectName(QStringLiteral("InputBox"));
+            InputBox->setObjectName(QString::fromUtf8("InputBox"));
         InputBox->resize(449, 209);
         horizontalLayoutWidget_2 = new QWidget(InputBox);
-        horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
+        horizontalLayoutWidget_2->setObjectName(QString::fromUtf8("horizontalLayoutWidget_2"));
         horizontalLayoutWidget_2->setGeometry(QRect(3, 0, 451, 211));
         horizontalLayout_3 = new QHBoxLayout(horizontalLayoutWidget_2);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(-1, 20, -1, -1);
         lblDesc = new QLabel(horizontalLayoutWidget_2);
-        lblDesc->setObjectName(QStringLiteral("lblDesc"));
+        lblDesc->setObjectName(QString::fromUtf8("lblDesc"));
         lblDesc->setWordWrap(true);
 
         verticalLayout_2->addWidget(lblDesc);
@@ -72,9 +72,9 @@ public:
         verticalLayout_2->addItem(verticalSpacer);
 
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         newMoveCmd = new QLineEdit(horizontalLayoutWidget_2);
-        newMoveCmd->setObjectName(QStringLiteral("newMoveCmd"));
+        newMoveCmd->setObjectName(QString::fromUtf8("newMoveCmd"));
         newMoveCmd->setEchoMode(QLineEdit::Normal);
 
         horizontalLayout_2->addWidget(newMoveCmd);
@@ -84,28 +84,28 @@ public:
         horizontalLayout_2->addItem(horizontalSpacer);
 
         horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         horizontalLayout_4->setContentsMargins(0, -1, -1, -1);
         verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, -1, -1, -1);
         rdbx1 = new QRadioButton(horizontalLayoutWidget_2);
-        rdbx1->setObjectName(QStringLiteral("rdbx1"));
+        rdbx1->setObjectName(QString::fromUtf8("rdbx1"));
 
         verticalLayout_3->addWidget(rdbx1);
 
         rdby1 = new QRadioButton(horizontalLayoutWidget_2);
-        rdby1->setObjectName(QStringLiteral("rdby1"));
+        rdby1->setObjectName(QString::fromUtf8("rdby1"));
 
         verticalLayout_3->addWidget(rdby1);
 
         rdbx2 = new QRadioButton(horizontalLayoutWidget_2);
-        rdbx2->setObjectName(QStringLiteral("rdbx2"));
+        rdbx2->setObjectName(QString::fromUtf8("rdbx2"));
 
         verticalLayout_3->addWidget(rdbx2);
 
         rdby2 = new QRadioButton(horizontalLayoutWidget_2);
-        rdby2->setObjectName(QStringLiteral("rdby2"));
+        rdby2->setObjectName(QString::fromUtf8("rdby2"));
 
         verticalLayout_3->addWidget(rdby2);
 
@@ -113,20 +113,20 @@ public:
         horizontalLayout_4->addLayout(verticalLayout_3);
 
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, -1, -1, -1);
         rdbY = new QRadioButton(horizontalLayoutWidget_2);
-        rdbY->setObjectName(QStringLiteral("rdbY"));
+        rdbY->setObjectName(QString::fromUtf8("rdbY"));
 
         verticalLayout->addWidget(rdbY);
 
         rdbX = new QRadioButton(horizontalLayoutWidget_2);
-        rdbX->setObjectName(QStringLiteral("rdbX"));
+        rdbX->setObjectName(QString::fromUtf8("rdbX"));
 
         verticalLayout->addWidget(rdbX);
 
         rdbTheta = new QRadioButton(horizontalLayoutWidget_2);
-        rdbTheta->setObjectName(QStringLiteral("rdbTheta"));
+        rdbTheta->setObjectName(QString::fromUtf8("rdbTheta"));
 
         verticalLayout->addWidget(rdbTheta);
 
@@ -143,14 +143,14 @@ public:
         horizontalLayout_3->addLayout(verticalLayout_2);
 
         buttonBox = new QDialogButtonBox(horizontalLayoutWidget_2);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setOrientation(Qt::Vertical);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 
         horizontalLayout_3->addWidget(buttonBox);
 
         buttonBox_2 = new QDialogButtonBox(horizontalLayoutWidget_2);
-        buttonBox_2->setObjectName(QStringLiteral("buttonBox_2"));
+        buttonBox_2->setObjectName(QString::fromUtf8("buttonBox_2"));
         buttonBox_2->setOrientation(Qt::Vertical);
         buttonBox_2->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 

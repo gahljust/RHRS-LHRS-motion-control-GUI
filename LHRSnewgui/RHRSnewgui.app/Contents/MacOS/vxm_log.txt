@@ -1,9 +1,0 @@
-** 5/18/2019 @ 19:2
-## theta motor movement command of 5440 steps stored.
-&& Command issued to motors: S3M16, I3M5440,
-++ Final horizontal position: 0
--- Final vertical position: 0
-<< Final theta position: 5440
-** 5/18/2019 @ 19:36
-** 5/18/2019 @ 19:38
-** 5/18/2019 @ 20:2
