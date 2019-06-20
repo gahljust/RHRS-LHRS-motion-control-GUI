@@ -589,11 +589,11 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "Angle:", nullptr));
         lblTheta->setText(QString());
         btnRotary->setText(QApplication::translate("MainWindow", "Rotary", nullptr));
-        label_5->setText(QApplication::translate("MainWindow", "Position A_T 1", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "Position A_T IN", nullptr));
         at1lbl->setText(QString());
         btnx1->setText(QApplication::translate("MainWindow", "x1", nullptr));
         btny1->setText(QApplication::translate("MainWindow", "y1", nullptr));
-        label_6->setText(QApplication::translate("MainWindow", "Position A_T 2", nullptr));
+        label_6->setText(QApplication::translate("MainWindow", "Position A_T OUT", nullptr));
         at2lbl->setText(QString());
         btnx2->setText(QApplication::translate("MainWindow", "x2", nullptr));
         btny2->setText(QApplication::translate("MainWindow", "y2", nullptr));

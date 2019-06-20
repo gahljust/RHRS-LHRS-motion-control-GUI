@@ -909,13 +909,13 @@ class VXM_interface2
         void new_move_command2(string motor2, string distance2){
                                                                                // BUILD COMMAND
         size2 = distance2.length() + 4;	                                       // need to add "I#M" and ","
-        if(motor2.compare("horizontal") == 0 || motor2.compare("x1") == 0)
+        if(motor2.compare("horizontal") == 0 || motor2.compare("x2") == 0)
             command2 = "I1M" + distance2 + ",";
-        else if(motor2.compare("vertical") == 0 || motor2.compare("y1") == 0)
-            command2 = "I2M" + distance2 + ",";
-        else if(motor2.compare("horizontal") == 0 || motor2.compare("x2") == 0)
-            command2 = "I3M" + distance2 + ",";
         else if(motor2.compare("vertical") == 0 || motor2.compare("y2") == 0)
+            command2 = "I2M" + distance2 + ",";
+        else if(motor2.compare("horizontal") == 0 || motor2.compare("x1") == 0)
+            command2 = "I3M" + distance2 + ",";
+        else if(motor2.compare("vertical") == 0 || motor2.compare("y1") == 0)
             command2 = "I4M" + distance2 + ",";
 
                                                                                   // CONFIRM NEW COMMAND

@@ -72,22 +72,22 @@ InputBox::~InputBox()
 void InputBox::on_buttonBox_accepted()
 {
 
-    
-    if(this->windowTitle().contains("Vertical") || this->windowTitle().contains("Horizontal A_T"))
-    {
+
+
+   if(this->windowTitle().contains("Horizontal Main Motor"));
 
         QString input = ui->newMoveCmd->text();
 
         double cm = input.split(" ")[0].toDouble();     //2000 steps/cm
-        int steps = (int)(cm*4000);
+        int steps = (int)(cm*2000);
 
-        if(cm != 0)
+        if(steps != 0)
         {
             QString QcmString = QString::number(cm);
 
             QString QstepString = QString::number(steps);
             std::string stepString = QstepString.toStdString();
-        
+
             QMessageBox::StandardButton reply;
             reply = QMessageBox::question(this, "Confirmation","Are you sure you want the move the motor " + QcmString + " cm?",QMessageBox::Yes|QMessageBox::No);
             if (reply == QMessageBox::Yes)
@@ -96,12 +96,36 @@ void InputBox::on_buttonBox_accepted()
             }                                                     // change title function pointer,
         }                                                        // second is text contained in the type in
 
-        else
-        {
-            QMessageBox messageBox;
-            messageBox.critical(0,"Error","Invalid Input");
-        }
-    }
+    else if(this->windowTitle().contains("Vertical") || this->windowTitle().contains("Horizontal A_T Motor"))
+         {
+
+             QString input = ui->newMoveCmd->text();
+
+             double cm = input.split(" ")[0].toDouble();     //4000 steps/cm
+             int steps = (int)(cm*4000);
+
+             if(cm != 0)
+             {
+                 QString QcmString = QString::number(cm);
+
+                 QString QstepString = QString::number(steps);
+                 std::string stepString = QstepString.toStdString();
+
+                 QMessageBox::StandardButton reply1;
+                 reply1 = QMessageBox::question(this, "Confirmation","Are you sure you want the move the motor " + QcmString + " cm?",QMessageBox::Yes|QMessageBox::No);
+                 if (reply1 == QMessageBox::Yes)
+                 {
+                     (parent_window.*m_func)(stepString);
+                                                                       //first parenthesis is
+                 }                                                     // change title function pointer,
+             }                                                        // second is text contained in the type in
+             else
+             {
+                 QMessageBox messageBox;
+                 messageBox.critical(0,"Error","Invalid Input");
+             }
+         }
+
 
     else if(this->windowTitle().contains("Rotational"))
     {
@@ -110,7 +134,7 @@ void InputBox::on_buttonBox_accepted()
         double deg =  input.split(" ")[0].toDouble();     //160 steps/deg
         int steps = (int)(deg*160);
 
-        if(deg != 0)
+        if(steps != 0)
         {
             QString QdegString = QString::number(deg);
 
@@ -146,28 +170,7 @@ void InputBox::on_buttonBox_accepted()
             messageBox.critical(0,"Error","Incorrect Password");
         }
     }
-    //  std::cout << ss.toStdString() << std::endl;
-    else if(this->windowTitle().contains("Horizontal Main"));
 
-        QString input = ui->newMoveCmd->text();
-
-        double cm = input.split(" ")[0].toDouble();     //2000 steps/cm
-        int steps = (int)(cm*2000);
-
-        if(cm != 0)
-        {
-            QString QcmString = QString::number(cm);
-
-            QString QstepString = QString::number(steps);
-            std::string stepString = QstepString.toStdString();
-
-            QMessageBox::StandardButton reply;
-            reply = QMessageBox::question(this, "Confirmation","Are you sure you want the move the motor " + QcmString + " cm?",QMessageBox::Yes|QMessageBox::No);
-            if (reply == QMessageBox::Yes)
-            {
-                (parent_window.*m_func)(stepString);              //first parenthesis is
-            }                                                     // change title function pointer,
-        }                                                        // second is text contained in the type in
 
 }
 

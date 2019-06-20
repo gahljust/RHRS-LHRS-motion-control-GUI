@@ -505,7 +505,7 @@ void MainWindow::sendSpeedCmd(std::string stepsPerSec)
 
     QString commandName = QString::fromStdString(port->get_command());
 
-    ui->lblCmdOut->setText(ui->lblCmdOut->text() + commandName);
+    ui->lblCmdOut->setText(commandName);
 
     ui->lblCmdOut->setText(ui->lblCmdOut->text());
 }
@@ -630,10 +630,10 @@ void MainWindow::paintEvent(QPaintEvent *)
 
     QPainter ataxiespainter(this);                                          //axies for A_t's
     ataxiespainter.setPen(QPen(Qt::black,4,Qt::SolidLine,Qt::RoundCap));
-    ataxiespainter.drawLine(395,420,395,340);
+    ataxiespainter.drawLine(435,420,435,340);
     ataxiespainter.drawLine(375,400,455,400);
-    ataxiespainter.drawText(380,350,"Y");
-    ataxiespainter.drawText(445,415,"X");
+    ataxiespainter.drawText(420,350,"X");
+    ataxiespainter.drawText(380,415,"Y");
 
     QPainter mainelectrons(this);                                          //Lines for main electrons
     mainelectrons.setPen(QPen(Qt::red,4,Qt::DashLine,Qt::RoundCap));
