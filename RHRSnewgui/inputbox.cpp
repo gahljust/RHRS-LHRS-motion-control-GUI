@@ -37,7 +37,7 @@ InputBox::InputBox(MainWindow &parent, QString title, QString desc, QString defa
 
     ui->newMoveCmd->setFocus();
 
-    if(title.contains("Main"))
+    if(title.contains("Change Main Speed Settings"))
     {
         ui->buttonBox_2->setVisible(true);
         ui->buttonBox->setVisible(false);
