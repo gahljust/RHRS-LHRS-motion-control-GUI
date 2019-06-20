@@ -108,7 +108,7 @@ void InputBox::on_buttonBox_accepted()
         QString input = ui->newMoveCmd->text();
 
         double deg =  input.split(" ")[0].toDouble();     //160 steps/deg
-        int steps = (int)(-deg*160);
+        int steps = (int)(deg*160);
 
         if(deg != 0)
         {
